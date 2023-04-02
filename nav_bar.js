@@ -1,6 +1,6 @@
 const LISTA = [
   { link: "../admin/admin.html", tag: "Admin" },
-  { link: "../public/index.html", tag: "User" },
+  { link: "../index.html", tag: "User" },
   { link: "../kosar/kosar.html", tag: "Kosar" },
 ];
 const KEPEK = [{src:"../Kepek/art.jpg",alt:"a kep tartalma"}];
