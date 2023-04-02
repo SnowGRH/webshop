@@ -1,0 +1,12 @@
+body{
+    background-color: gray;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+img{ 
+    width: 98%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
