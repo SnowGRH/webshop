@@ -1,3 +1,4 @@
+
 let LISTA = [];
 const KEPEK = [{src:"../Kepek/art.jpg",alt:"a kep tartalma"}];
 const STYLE = [{src:"../style.css"}];
@@ -15,6 +16,7 @@ export function init(menus) {
   HEAD.append(headerkiiras);
   META.append(metakiiras);
 }
+
 function nav() {
     let text = `<div class="container-fluid "><div class="d-flex p-2 bg-secondary">`;
     for (let index = 0; index < LISTA.length; index++) {
