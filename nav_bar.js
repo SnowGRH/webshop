@@ -1,10 +1,10 @@
 const LISTA = [
-  { link: "../admin/admin.html", tag: "Admin" },
-  { link: "../index.html", tag: "User" },
-  { link: "../kosar/kosar.html", tag: "Kosar" },
+  { link: "./admin/admin.html", tag: "Admin" },
+  { link: "./index.html", tag: "User" },
+  { link: "./kosar/kosar.html", tag: "Kosar" },
 ];
-const KEPEK = [{src:"../Kepek/art.jpg",alt:"a kep tartalma"}];
-const STYLE = [{src:"../style.css"}];
+const KEPEK = [{src:"./Kepek/art.jpg",alt:"a kep tartalma"}];
+const STYLE = [{src:"./style.css"}];
 
 $(function () {
   const NAV = $("nav");
@@ -13,7 +13,7 @@ $(function () {
   
   let metakiiras = metatag();
   let navkiiras = nav();
-  let headerkiiras = Headerkep();
+  let headerkiiras = headerKep();
   NAV.append(navkiiras);
   HEAD.append(headerkiiras);
   META.append(metakiiras);
@@ -28,7 +28,7 @@ function nav() {
     console.log(text);
     return text;
 }
-function Headerkep() {
+function headerKep() {
     let text = `<div>`;
     for (let index = 0; index < KEPEK.length; index++) {
       text += `<img class=" rounded "  src="${KEPEK[index].src}" alt="${KEPEK[index].alt}">`;

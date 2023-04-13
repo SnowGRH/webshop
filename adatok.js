@@ -1,30 +1,30 @@
 export const adatokLista = [{
-    kep: "../Kepek/pirosAuto.jpg",
+    kep: "Kepek/pirosAuto.jpg",
     kepneve:"kecske",
     leiras:"Valami",
     ara: "1000",
 },{
-    kep: "../Kepek/",
+    kep: "Kepek/",
     kepneve:"kecske",
     leiras:"Valami",
     ara: "1000",
 },{
-    kep: "../Kepek/",
+    kep: "Kepek/",
     kepneve:"kecske",
     leiras:"Valami",
     ara: "1000",
 },{
-    kep: "../Kepek/",
+    kep: "Kepek/",
     kepneve:"kecske",
     leiras:"Valami",
     ara: "1000",
 },{
-    kep: "../Kepek/",
+    kep: "Kepek/",
     kepneve:"kecske",
     leiras:"Valami",
     ara: "1000",
 },{
-    kep: "../Kepek/",
+    kep: "Kepek/",
     kepneve:"kecske",
     leiras:"Valami",
     ara: "1000",
