@@ -1,12 +1,28 @@
-const LISTA = [
-  { link: "./admin/admin.html", tag: "Admin" },
-  { link: "./index.html", tag: "User" },
-  { link: "./kosar/kosar.html", tag: "Kosar" },
-];
-const KEPEK = [{src:"./Kepek/art.jpg",alt:"a kep tartalma"}];
-const STYLE = [{src:"./style.css"}];
+/* const LISTA = [
+  { link: "admin/admin.html", tag: "Admin" },
+  { link: "index.html", tag: "User" },
+  { link: "kosar/kosar.html", tag: "Kosar" },
+]; */
+let LISTA = [];
+const KEPEK = [{src:"../Kepek/art.jpg",alt:"a kep tartalma"}];
+const STYLE = [{src:"../style.css"}];
 
-$(function () {
+
+
+export function init(menus) {
+  LISTA = menus;
+  const NAV = $("nav");
+  const HEAD = $("header");
+  const META = $("head");
+  
+  let metakiiras = metatag();
+  let navkiiras = nav();
+  let headerkiiras = headerKep();
+  NAV.append(navkiiras);
+  HEAD.append(headerkiiras);
+  META.append(metakiiras);
+}
+/* $(function () {
   const NAV = $("nav");
   const HEAD = $("header");
   const META = $("head");
@@ -18,7 +34,7 @@ $(function () {
   HEAD.append(headerkiiras);
   META.append(metakiiras);
 
-});
+}); */
 function nav() {
     let text = `<div class="container-fluid "><div class="d-flex p-2 bg-secondary">`;
     for (let index = 0; index < LISTA.length; index++) {

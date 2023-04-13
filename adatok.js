@@ -1,4 +1,4 @@
-export const adatokLista = [{
+export const ADATOKLISTA = [{
     kep: "Kepek/pirosAuto.jpg",
     kepneve:"kecske",
     leiras:"Valami",
