@@ -1,5 +1,5 @@
 export const ADATOKLISTA = [{
-    kep: "Kepek/pirosAuto.jpg",
+    kep: "../Kepek/pirosAuto.jpg",
     kepneve:"kecske",
     leiras:"Valami",
     ara: "1000",
