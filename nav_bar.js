@@ -1,4 +1,5 @@
 
+import { ADATOKLISTA } from "../adatok.js";
 let LISTA = [];
 const KEPEK = [{src:"../Kepek/art.jpg",alt:"a kep tartalma"}];
 const STYLE = [{src:"../style.css"}];
@@ -8,13 +9,19 @@ export function init(menus) {
   const NAV = $("nav");
   const HEAD = $("header");
   const META = $("head");
+  const ASIDE = $("aside");
   
   let metakiiras = metatag();
   let navkiiras = nav();
   let headerkiiras = headerKep();
+  let asidekiiras = szures();
   NAV.append(navkiiras);
   HEAD.append(headerkiiras);
   META.append(metakiiras);
+  ASIDE.append(asidekiiras);
+
+
+
 }
 
 function nav() {
@@ -42,4 +49,16 @@ function metatag() {
     }
     //console.log(text);
     return text;
+}
+function szures(params) {
+  let text =`<button id="szur">Arak</button>`;
+  //console.log(text);
+  return text;
+  
+}
+function szamrendezes() {
+  $("#szur").on("click", function (event) {
+    rendezesSzam(ADATOKLISTA[0].ara);
+
+  })
 }
