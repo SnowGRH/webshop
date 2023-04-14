@@ -21,6 +21,8 @@ init(LISTA)
 });
 function Artdiv() {
   let txt = "<div>";
+
+
   for (let index = 0; index < ADATOKLISTA.length; index++) {
     txt += `<div>
         <p>${ADATOKLISTA[index].kepneve}</p>
@@ -31,24 +33,28 @@ function Artdiv() {
 Leiras
 </button>
         </div>
-</div>`;
+</div>
+`;
   }
-  txt += `<div class="modal" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-       Helloo
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+  txt += `
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Helloo
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-  `;;
+`;
+  
   //console.log(txt);
   return txt;
 }
