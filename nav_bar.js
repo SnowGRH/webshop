@@ -1,5 +1,6 @@
-
 import { ADATOKLISTA } from "../adatok.js";
+import { FOOTER } from "../adatok.js";
+
 let LISTA = [];
 const KEPEK = [{src:"../Kepek/art.jpg",alt:"a kep tartalma"}];
 const STYLE = [{src:"../style.css"}];
@@ -10,13 +11,17 @@ export function init(menus) {
   const HEAD = $("header");
   const META = $("head");
   const ASIDE = $("aside");
+  const FOOTER = $("footer");
+
   
   let metakiiras = metatag();
   let navkiiras = nav();
   let headerkiiras = headerKep();
+  let footerkiiras = footerkiir();
   NAV.append(navkiiras);
   HEAD.append(headerkiiras);
   META.append(metakiiras);
+  FOOTER.append(footerkiiras);
 }
 
 function nav() {
@@ -45,4 +50,13 @@ function metatag() {
     //console.log(text);
     return text;
 }
-
+function footerkiir() {
+  let text = `<div>`;
+  for (let index = 0; index < KEPEK.length; index++) {
+    text += `<p class="text-white">${FOOTER} </p>`;
+  
+  }
+  text += `</div>`
+  //console.log(text);
+  return text;
+}
