@@ -1,11 +1,20 @@
 body{
-    background-color: gray;
+    background-color: black;
     margin-left: 20%;
     margin-right: 20%;
 }
  header img{ 
     width: 98%;
+    height: 300px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 10px;
+}
+.tablecoloradmin{
+    background-color: rgb(220, 60, 90);
+    border-color: black;
+}
+.cardgap{
+    gap:10px
 }

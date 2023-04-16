@@ -15,7 +15,7 @@ $(function () {
   art.append(ARTDIVKIIR);
 
   viewGomb();
-  removeGomb();
+  removeGomb(art);
 
   const MODELCHANGE = $("modal-dialog");
 });
@@ -23,14 +23,14 @@ function Artdiv() {
   let txt = `<div class="container mt-3">
   <input class="form-control" id="myInput" type="text" placeholder="Keresés...">
   <br>
-  <table class="table table-bordered">
+  <table class="table table-bordered  tablecoloradmin">
   <thead>
-    <tr>
+    <tr class="h2 text-center">
 
       <th>Kepneve</th>
-      <th>Leiras</th>
+      <th>Leirás</th>
       <th>Ára</th>
-      <th>Teljes leirás </th>
+      <th>Modul </th>
       <th>Törlés</th>
     </tr>
   </thead>
@@ -39,17 +39,17 @@ function Artdiv() {
 
   for (let index = 0; index < ADATOKLISTA.length; index++) {
     txt += ` 
-      <tr class="removBtn" >
+      <tr class=" h4 text-center" >
         <td class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">${ADATOKLISTA[index].kepneve}</td>
         <td class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">${ADATOKLISTA[index].leiras}</td>
         <td class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">${ADATOKLISTA[index].ara} Ft </td>
         <td class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
-        <button type="button" id="view-${index}"  class="btn btn-primary viewBtn " data-bs-toggle="modal" data-bs-target="#myModal">
+        <button type="button" id="view-${index}"  class=" btn bg-dark text-white viewBtn " data-bs-toggle="modal" data-bs-target="#myModal">
         Leiras
         </button>
         </td>
         <td class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
-        <button class="bg-danger">
+        <button class="btn removBtn bg-dark text-white" id="${index}">
         X
         </button>
         </td>
@@ -100,9 +100,12 @@ function viewGomb() {
   });
 }
 
-function removeGomb() {
+function removeGomb(art) {
+  $(".removBtn").off("click");
   $(".removBtn").on("click", function (event) {
-    let id = parseInt(event.target.id.split("-")[1]);
-    $("tr").remove(ADATOKLISTA[id]);
+    let id = parseInt(event.target.id);
+    ADATOKLISTA.splice(id,1);
+    art.html(Artdiv());
+    removeGomb(art);
   });
 }

@@ -20,9 +20,9 @@ export function init(menus) {
 }
 
 function nav() {
-    let text = `<div class="container-fluid "><div class="d-flex p-2 bg-secondary">`;
+    let text = `<div class="container-fluid "><div class="d-flex p-2">`;
     for (let index = 0; index < LISTA.length; index++) {
-      text += `<div><a class="col p-3 text-white" href='${LISTA[index].link}'>${LISTA[index].tag}</a></div>`;
+      text += `<div><a class="col p-3 text-white border border-1 rounded-pill  " href='${LISTA[index].link}'>${LISTA[index].tag}</a></div>`;
     }
     text += `</div></div>`
     //console.log(text);
@@ -31,7 +31,7 @@ function nav() {
 function headerKep() {
     let text = `<div>`;
     for (let index = 0; index < KEPEK.length; index++) {
-      text += `<img class=" rounded "  src="${KEPEK[index].src}" alt="${KEPEK[index].alt}">`;
+      text += `<img class=" rounded mx-auto d-block"  src="${KEPEK[index].src}" alt="${KEPEK[index].alt}">`;
     }
     text += `</div>`
     //console.log(text);

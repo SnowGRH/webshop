@@ -24,25 +24,18 @@ function Artdiv() {
   let txt = `<div class="container mt-3 row">`;
 
   for (let index = 0; index < ADATOKLISTA.length; index++) {
-    txt += `  <div class="card col-lg-3 col-md-4 col-sm-6 p-0">
+    txt += `  <div class="card cardgap col-lg-3 col-md-4 col-sm-6 p-0">
     <div class="card-body">
       <h4 class="card-title">${ADATOKLISTA[index].kepneve}</h4>
       <p class="card-text">${ADATOKLISTA[index].leiras}</p>
       <p href="#" class="btn-primary">Az ara: ${ADATOKLISTA[index].ara} Ft</p>
     </div>
     <img class="card-img-bottom" src="${ADATOKLISTA[index].kep}" alt="Card image" style="width:100%">
-    <button type="button" id="view-${index}"  class="btn btn-primary viewBtn" data-bs-toggle="modal" data-bs-target="#myModal">
+    <button type="button" id="view-${index}"  class="btn btn-primary tablecoloradmin viewBtn" data-bs-toggle="modal" data-bs-target="#myModal">
     Leiras
     </button>
     </div>
 `;
-  /* for (let i = 0; i < ADATOKLISTA.length; i++) {
-    console.log(i);
-    $("myModal").on("click", function (event) {
-      modelkezelese(ADATOKLISTA[i]);
-
-    })
-  } */
   }
   txt += `</div>`;
   //console.log(txt);
