@@ -56,7 +56,10 @@ function modelkezelese(adatok) {
   modeltxt += `
   <div class="modal-content">
   <div class="modal-header">
+  <button><<</button>
     <h4 class="modal-title">Termék neve: ${adatok.kepneve}  ||   Ára: ${adatok.ara} Ft</h4>
+    
+    <button>>></button>
     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
   </div>
   <div class="modal-body">

@@ -10,19 +10,31 @@ $(function () {
   ];
   init(LISTA);
   /*Idáig*/
-  const art = $("article");
+  const ART = $("article");
+  const ASI = $("aside");
+  let ASIKIIR =  asideKeresesLetrehozas();
   let ARTDIVKIIR = Artdiv();
-  art.append(ARTDIVKIIR);
+  ART.append(ARTDIVKIIR);
+  ASI.append(ASIKIIR);
 
   viewGomb();
   removeGomb(art);
 
   const MODELCHANGE = $("modal-dialog");
 });
+function asideKeresesLetrehozas(params) {
+  let txt =   `<div class=" row">
+  <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+  <input  id="myInput" type="text" placeholder="Keresés...">  
+  </div>
+  <button class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">Létre hozzás</button>
+  </div>
+  <br></br>`
+  return txt  
+}
 function Artdiv() {
   let txt = `<div class="container mt-3">
-  <input class="form-control" id="myInput" type="text" placeholder="Keresés...">
-  <br>
+
   <table class="table table-bordered  tablecoloradmin">
   <thead>
     <tr class="h2 text-center">
@@ -69,7 +81,10 @@ function modelkezelese(adatok) {
   modeltxt += `
   <div class="modal-content">
   <div class="modal-header">
-    <h4 class="modal-title">Termék neve: ${adatok.kepneve}  ||   Ára: ${adatok.ara} Ft</h4>
+  <button><<</button>
+  <h4 class="modal-title">Termék neve: ${adatok.kepneve}  ||   Ára: ${adatok.ara} Ft</h4>
+  
+  <button>>></button>
     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
   </div>
   <div class="modal-body">
