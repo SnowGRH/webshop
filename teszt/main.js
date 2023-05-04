@@ -1,11 +1,14 @@
 let lista = {};
-const ADATOK = [{
-  kep: "../Kepek/GT_B20.jpg", 
-  kepneve:"1951 Lancia Aurelia B20 GT",
-  leiras:"A grand tourer (GT) .......",
-  teljesleira:"A grand tourer (GT) is a type of car that is designed for high speed and long-distance driving, due to a combination of performance and luxury attributes.[1] The most common format is a front-engine, rear-wheel-drive two-door coupé with either a two-seat or a 2+2 arrangement. Grand tourers are most often the coupé derivative of luxury saloons or sedans.    The term is a near-calque from the Italian language phrase gran turismo which became popular in the English language from the 1950s, evolving from fast touring cars and streamlined closed sports cars during the 1930s",
-  ara: "10000",
-}]
+const ADATOK = [
+  {
+    kep: "../Kepek/GT_B20.jpg",
+    kepneve: "1951 Lancia Aurelia B20 GT",
+    leiras: "A grand tourer (GT) .......",
+    teljesleira:
+      "A grand tourer (GT) is a type of car that is designed for high speed and long-distance driving, due to a combination of performance and luxury attributes.[1] The most common format is a front-engine, rear-wheel-drive two-door coupé with either a two-seat or a 2+2 arrangement. Grand tourers are most often the coupé derivative of luxury saloons or sedans.    The term is a near-calque from the Italian language phrase gran turismo which became popular in the English language from the 1950s, evolving from fast touring cars and streamlined closed sports cars during the 1930s",
+    ara: "10000",
+  },
+];
 
 $(function () {
   /*Az oldal szerkezete és annak fel épitése*/
@@ -18,7 +21,7 @@ $(function () {
   /*Idáig*/
   const ART = $("article");
   const ASI = $("aside");
-  let ASIKIIR =  asideKeresesLetrehozas();
+  let ASIKIIR = asideKeresesLetrehozas();
   let ARTDIVKIIR = Artdiv();
   ART.append(ARTDIVKIIR);
   ASI.append(ASIKIIR);
@@ -29,14 +32,14 @@ $(function () {
   const MODELCHANGE = $("modal-dialog");
 });
 function asideKeresesLetrehozas(params) {
-  let txt =   `<div class=" row">
+  let txt = `<div class=" row">
   <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
   <input  id="myInput" type="text" placeholder="Keresés...">  
   </div>
   <button class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">Létre hozzás</button>
   </div>
-  <br></br>`
-  return txt  
+  <br></br>`;
+  return txt;
 }
 function Artdiv() {
   let txt = `<div class="container mt-3">
@@ -44,7 +47,6 @@ function Artdiv() {
   <table class="table table-bordered  tablecoloradmin">
   <thead>
     <tr class="h2 text-center">
-
       <th>Kepneve</th>
       <th>Leirás</th>
       <th>Ára</th>
@@ -125,7 +127,7 @@ function removeGomb(art) {
   $(".removBtn").off("click");
   $(".removBtn").on("click", function (event) {
     let id = parseInt(event.target.id);
-    ADATOKLISTA.splice(id,1);
+    ADATOKLISTA.splice(id, 1);
     art.html(Artdiv());
     removeGomb(art);
   });
